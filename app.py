@@ -12,10 +12,10 @@ def load_model():
     """Load the trained model"""
     try:
         # Check if model exists in the current directory
-        if not os.path.exists('model/densenet121_model_clahe.keras'):
+        if not os.path.exists('model/densenet121_model_clahe_final.keras'):
             st.error("Model file not found. Please ensure the model is in the 'model' directory.")
             return None
-        model = tf.keras.models.load_model('model/densenet121_model_clahe.keras')
+        model = tf.keras.models.load_model('model/densenet121_model_clahe_final.keras')
         return model
     except Exception as e:
         st.error(f"Error loading model: {str(e)}")
